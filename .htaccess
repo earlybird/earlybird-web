@@ -15,6 +15,7 @@ ExpiresDefault "access plus 2 days"
 ## EXPIRES CACHING ##
 
 
+
 <ifModule mod_gzip.c>
   mod_gzip_on Yes
   mod_gzip_dechunk Yes
@@ -28,6 +29,8 @@ ExpiresDefault "access plus 2 days"
 
 <IfModule mod_rewrite.c>
  RewriteEngine On
+ RewriteCond %{HTTPS} !=on
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
  RewriteRule ^(wp-admin)($|/) - [L] # You don't want to mess with WordPress 
  RewriteCond %{REQUEST_FILENAME} !-d
  RewriteCond %{REQUEST_FILENAME}\.html -f
