@@ -9499,7 +9499,7 @@ footer .social-share a i {
 }
 
 footer .footer-links {
-    margin: 120px 0 120px 0;
+    margin: 40px 0 0 0;
 }
 
 /* ==========================================================================
@@ -10247,7 +10247,7 @@ you can use the generic selector below, but it's slower:
         display: none;
     }
     footer .footer-links {
-        margin: 120px 0 120px 0;
+        margin: 40px 0 0 0;
     }
 }
 
